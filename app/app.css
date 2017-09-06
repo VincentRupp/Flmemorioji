@@ -1,0 +1,30 @@
+body {
+	background-color:#397788;
+	font-family: 'Kalam';
+}
+
+.gameSize {
+	width:30%;
+	margin:1%;
+	padding:1%;
+	border:3px groove #999;
+	border-radius:10px;
+	font-weight:bold;
+	color:#2d3e83;
+	/*color:#FFDE90;*/
+	background-color:#c19631;
+	/*background-color:#6C7AB0;*/
+	box-shadow:4px 4px 1px #2D3E83;
+}
+
+.gameSize:hover {
+	color:#DBB357;
+	background-color:#465695;
+}
+
+.gameSize:active {
+	position:relative;
+	left:2px;
+	top:2px;
+	box-shadow:2px 2px #2D3E83;
+}
