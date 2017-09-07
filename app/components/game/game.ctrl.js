@@ -55,7 +55,6 @@
 		};
 
 	vm.gameOver = function() {
-		console.log("You win!");
 		vm.youwin = true;
 	}
 	

@@ -24,6 +24,7 @@
 // 							],
 // 		width: 99/3,
 //		height: 70/2,
+//		rows: 3,
 //		matches: 3};
 
 (function() {
@@ -72,6 +73,7 @@
 			board.tiles = tiles;
 			board.width = 99/boardSize.cols;
 			board.height = 75/boardSize.rows;
+			board.rows = boardSize.rows;
 			board.matches = boardSize.matches;
 			return board;
 		};
