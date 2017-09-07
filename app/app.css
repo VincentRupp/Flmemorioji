@@ -55,6 +55,7 @@ body {
 	font-weight:bold;
 	font-size:1.2em;
 	color:#2d3e83;
+	z-index:2;
 	/*color:#FFDE90;*/
 	background-color:#c19631;
 	/*background-color:#6C7AB0;*/
@@ -67,13 +68,14 @@ button.footerButton:hover {
 }
 /*CSS for /newgame */
 .gameSize {
-	width:30%;
+/*	width:30%;
 	margin:1%;
-	padding:1%;
+	padding:1%;*/
+	min-height:50px;
 	border:3px groove #999;
 	border-radius:10px;
 	font-weight:bold;
-	font-size:1.2em;
+	font-size:2em;
 	color:#2d3e83;
 	/*color:#FFDE90;*/
 	background-color:#c19631;
@@ -124,6 +126,10 @@ button.footerButton:hover {
 .winmojistd.winmoji {
 	width: 40%;
 }
+.winmojistd>img {
+	max-height:300px;
+}
+
 .winrowbtm {
 	position:relative;
 	top:-20%;

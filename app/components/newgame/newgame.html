@@ -5,12 +5,12 @@
 <div class="panel-body">
 	<div class="container">
 		<div class="row">
-			<div class="col-xs-12 text-center">
-				<button 	ng-repeat="size in sizeList"
-							ng-click="startGame(size.size)"
-							class="gameSize">
-								{{ size.name }}
-				</button>
+			<!-- <div class="col-xs-12 text-center"> -->
+			<!-- <div class="col-md-4"> -->
+				<div class="col-sm-4 col-xs-12 text-center" ng-repeat="size in sizeList">
+					<button ng-click="startGame(size.size)" class="gameSize" style="width:100%;">
+						{{ size.name }}
+					</button>
 			</div>
 		</div>
 	</div>
