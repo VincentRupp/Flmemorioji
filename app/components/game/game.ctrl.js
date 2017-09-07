@@ -14,7 +14,8 @@
 		this.title ='Some title';
 		vm.activeTiles = [];
 		vm.matchesFound = 0;
-
+		vm.youwin = false;
+		vm.tries = 0;
 		// Tests two tiles to see if their emoji match
 		vm.checkMatch = function(tile1, tile2) {
 			if (tile1.emoji === tile2.emoji && tile1.pos != tile2.pos) { return true;	}
@@ -53,6 +54,10 @@
 			else {return false}
 		};
 
+	vm.gameOver = function() {
+		console.log("You win!");
+		vm.youwin = true;
+	}
 	
 
 // When a tile is clicked:
@@ -80,10 +85,12 @@
 			if (vm.clickNum===2) {
 				if (vm.checkMatch(vm.activeTiles[0],vm.activeTiles[1])) {
 					vm.matchesFound++;
-					vm.checkGameOver(vm.matchesFound, vm.board);
 					vm.markMatched(vm.activeTiles[0].pos, vm.board);
 					vm.markMatched(vm.activeTiles[1].pos, vm.board);
 					activeTiles = [];
+					if (vm.checkGameOver(vm.matchesFound, vm.board)) {
+						vm.gameOver();
+					}
 				} else {
 					$timeout(vm.MarkIn)
 					// $timeout(function() {
@@ -96,6 +103,7 @@
 					$timeout(vm.markInvisible, 1000, true, vm.activeTiles[0].pos, vm.board);
 					// .then(vm.markInvisible(vm.activeTiles[1].pos, vm.board));
 				}
+				vm.tries++;
 				vm.clickNum = 0;
 				vm.activeTiles = [];
 			}

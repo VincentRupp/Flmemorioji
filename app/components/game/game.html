@@ -6,9 +6,41 @@
 	<!-- <p>{{vm.board.tiles.length}}</p> -->
 	</button>
 
+<!-- Emoji for winning:
+Fireworks: 1f386
+Birthday cake: 1f382
+Balloon: 1f388
+Party popper: 1f389 -->
+	<div ng-class="{'youwin':vm.youwin}" class="winbox">
+		<div class="row rowwin">
+			<div class="winmojistd col-xs-4" ng-class="{'winmoji':vm.youwin}">
+				<img src="public/svg/1f389.svg">
+			</div>
+			<div class="fright winmojistd col-xs-4" ng-class="{'winmoji':vm.youwin}">
+				<img src="public/svg/1f382.svg">
+			</div>
+		</div>
+		<div class="row rowwin">
+			<div class="text-center wintextstd" ng-class="{'wintext':vm.youwin}"><p>You win!</p></div>
+		</div>
+		<div class="row rowwin winrowbtm">
+			<div class="winmojistd col-xs-4" ng-class="{'winmoji':vm.youwin}">
+				<img src="public/svg/1f388.svg">
+			</div>
+			<div class="fright winmojistd col-xs-4" ng-class="{'winmoji':vm.youwin}">
+				<img src="public/svg/1f386.svg">
+			</div>
+		</div>
+	</div>
+</div>
+
 	<br>
-	<div class="row text-center">
-		<button class="footerButton" onclick="location.href = '#/newgame';">Quit Game</button>
-		<button class="footerButton" ng-click="vm.newSameGame()">Restart</button>
+
+	<div class="container">
+		<div class="row text-center">
+			<button class="footerButton" onclick="location.href = '#/newgame';">Quit Game</button>
+			<button class="footerButton" ng-click="vm.newSameGame()">Restart</button>
+			<div class="footerButton">Tries: {{ vm.tries }}</div>
+		</div>
 	</div>
 </div>

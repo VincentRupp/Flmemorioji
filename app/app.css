@@ -8,6 +8,9 @@ body {
 	font-family: 'Kalam';
 }
 
+.bordz {
+	border: 3px solid black;
+}
 /*CSS for /game/:size*/
 .tile {
 	float:left;
@@ -43,11 +46,27 @@ body {
 }
 
 .footerButton {
-	margin-top:10px;
+	float: left;
+	width:31%;
+	margin:1%;
+	padding:1%;
+	border:3px groove #999;
+	border-radius:10px;
+	font-weight:bold;
+	font-size:1.2em;
+	color:#2d3e83;
+	/*color:#FFDE90;*/
+	background-color:#c19631;
+	/*background-color:#6C7AB0;*/
+	box-shadow:4px 4px 1px #2D3E83;
 }
 
+button.footerButton:hover {
+	color:#DBB357;
+	background-color:#465695;
+}
 /*CSS for /newgame */
-.gameSize, .footerButton {
+.gameSize {
 	width:30%;
 	margin:1%;
 	padding:1%;
@@ -62,7 +81,7 @@ body {
 	box-shadow:4px 4px 1px #2D3E83;
 }
 
-.gameSize:hover, .footerButton:hover {
+.gameSize:hover {
 	color:#DBB357;
 	background-color:#465695;
 }
@@ -72,6 +91,57 @@ body {
 	left:2px;
 	top:2px;
 	box-shadow:2px 2px #2D3E83;
+}
+
+/*CSS for winning the game*/
+.winbox {
+	border:5px outset #C19631;
+	visibility:hidden;
+	position:fixed;
+	top:50%;
+	left:50%;
+	width:0%;
+	height:0%;
+	background-color:#397788;
+	transition: height 1.5s linear, width 1.5s linear, top 1.5s linear, left 1.5s linear;
+	/*transition: width 2s linear 0s;*/
+}
+.youwin {
+	visibility:visible;
+	position:fixed;
+	top: 2%;
+	left: 8%;
+	height:75%;
+	width:80%;
+}
+.fright {
+	float:right;
+}
+.winmojistd {
+	width:10%;
+	transition: width 1.5s linear;
+}
+.winmojistd.winmoji {
+	width: 50%;
+}
+.winrowbtm {
+	position:relative;
+	top:-20%;
+}
+.wintextstd {
+	position:relative;
+	top:-35%;
+	font-size: 100%;
+	z-index:0;
+	text-shadow:2px 2px #C19631;
+	transition: font-size 1.5s linear;
+}
+.wintextstd.wintext {
+	font-size: 800%;
+}
+.row.rowwin {
+	height: 33%;
+	z-index:-1;
 }
 
 /*CSS for panel*/
