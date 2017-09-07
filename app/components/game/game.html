@@ -1,0 +1,14 @@
+<div class="panel-body">
+	<button ng-repeat="tile in vm.board.tiles" style="width:{{vm.board.width+'%'}};height:{{vm.board.height*vm.wh/100+'px'}};" class="tile"" ng-click="vm.clickTile(tile)" ng-class="{'matched':tile.matched}">
+		<img src="{{'public/svg/'+tile.emoji.unicode+'.svg'}}" class="emojiImage" ng-class="{'thisishidden': !tile.visible}"></i>
+		<!-- {{tile.emoji.unicode}} -->
+<!-- 		<p>{{tile.visible}}</p> -->
+	<!-- <p>{{vm.board.tiles.length}}</p> -->
+	</button>
+
+	<br>
+	<div class="row text-center">
+		<button class="footerButton" onclick="location.href = '#/newgame';">Quit Game</button>
+		<button class="footerButton" ng-click="vm.newSameGame()">Restart</button>
+	</div>
+</div>

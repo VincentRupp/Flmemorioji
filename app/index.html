@@ -7,10 +7,6 @@
 	<link href='https://fonts.googleapis.com/css?family=Kalam' rel='stylesheet'>
   <link rel="stylesheet" href="app.css">
 
-	<!-- add emoji -->
-	<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
-
-
   <!--angular and ui-router-->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
@@ -19,7 +15,7 @@
 	<script src="components/newgame/newgame.ctrl.js"></script>
 	<script src="services/board/board.fac.js"></script>
 	<script src="services/emoji/emoji.fac.js"></script>
-	<script src=""></script>
+	<script src="components/game/game.ctrl.js"></script>
 	<script src=""></script>
 	<script src=""></script>
 	<script src=""></script>
@@ -29,16 +25,23 @@
   <script src="app.js"></script>
 </head>
 <body ng-app="Memory">
+	<div class="panel panel-default">
 	<!-- Header -->
 
 	
-
-	<ui-view>Hello world!</ui-view>
-
+		<ui-view>Hello world!</ui-view>
 
 	<!-- Footer -->
-	<div class="panel-footer text-center">
-		<p>Flmemorioji on Github</p>
-	</div>
+		<div class="panel-footer text-center">
+			<div class="row">
+				<div class="col-sm-4">
+					<h4><a href="https://commons.wikimedia.org/wiki/Category:Twitter_Emoji">Twemoji on Wikimedia</a></h4>
+				</div>
+				<div class="col-sm-4">
+					<h4><a href="https://github.com/VincentRupp/Flmemorioji">Flmemorioji on Github</a></h4>
+				</div>
+			</div>
+		</div>
+	</div> <!-- End panel -->
 </body>
 </html>

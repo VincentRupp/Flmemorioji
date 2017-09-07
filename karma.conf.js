@@ -21,9 +21,11 @@ module.exports = function(config) {
         './app/services/emoji/emoji.fac.js',
         './app/services/board/board.fac.js',
         './app/components/newgame/newgame.ctrl.js',
+        './app/components/game/game.ctrl.js',
         './app/services/emoji/emoji.fac.spec.js',
         './app/services/board/board.fac.spec.js',
-        './app/components/newgame/newgame.ctrl.spec.js'
+        './app/components/newgame/newgame.ctrl.spec.js',
+        './app/components/game/game.ctrl.spec.js'
     ],
 
 

@@ -1,15 +1,60 @@
+.vclass {
+	border:10px solid red;
+	font-weight:bold;
+}
+
 body {
 	background-color:#397788;
 	font-family: 'Kalam';
 }
 
-.gameSize {
+/*CSS for /game/:size*/
+.tile {
+	float:left;
+	border-radius:4px;
+	border:4px groove #bbb;
+	box-shadow:2px 2px black;
+	background-color:#c19631;
+}
+.tile:not(.matched):hover {
+	position:relative;
+	left:-2px;
+	top:-2px;
+}
+.tile.visible {
+	background:none;
+}
+
+.thisishidden {
+	display:none;
+	visibility:hidden;
+}
+
+.emojiImage {
+	width:90%;
+	height:90%;
+}
+
+.tile.matched {
+	background-color:#09174D;
+}
+.tile.matched:hover {
+
+}
+
+.footerButton {
+	margin-top:10px;
+}
+
+/*CSS for /newgame */
+.gameSize, .footerButton {
 	width:30%;
 	margin:1%;
 	padding:1%;
 	border:3px groove #999;
 	border-radius:10px;
 	font-weight:bold;
+	font-size:1.2em;
 	color:#2d3e83;
 	/*color:#FFDE90;*/
 	background-color:#c19631;
@@ -17,14 +62,24 @@ body {
 	box-shadow:4px 4px 1px #2D3E83;
 }
 
-.gameSize:hover {
+.gameSize:hover, .footerButton:hover {
 	color:#DBB357;
 	background-color:#465695;
 }
 
-.gameSize:active {
+.gameSize:active, footerButton:hover {
 	position:relative;
 	left:2px;
 	top:2px;
 	box-shadow:2px 2px #2D3E83;
+}
+
+/*CSS for panel*/
+.panel {
+	background-color:#397788;
+}
+.panel-footer, .panel-heading {
+	background-color: #09174D;
+	color: #C19631;
+	border-color:#C19631;
 }

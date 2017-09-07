@@ -11,27 +11,25 @@ describe('Emoji Factory', function() {
 
 	beforeEach(angular.mock.module('factory.emoji'));
 
-	// beforeEach(angular.mock.module('api.users'));
-
 	beforeEach(inject(function(_emojiFactory_) {
 		emojiFactory = _emojiFactory_;
 	}));
 
-	// beforeEach(inject(function(_EmojiFactory_){
-	// 	EmojiFactory = _EmojiFactory_;
-	// }));
-	
-	it('should exist', function() {
+	it('should be defined', function() {
 		expect(emojiFactory).toBeDefined();
 	});
-	it('should have a method to get a certain number of unrandomized emoji', function() {
+	it('should have a method to get a certain number of emoji', function() {
 		x = emojiFactory.get(4);
 		expect(x.length).toEqual(4);
-		expect(x[0].id).toEqual(1);
 	});
 	it('should have a method to randomize', function() {
 		expect(emojiFactory.randomize).toBeDefined();
-		x = emojiFactory.get(5);
+		x = [
+			{id: 1, name: 'em-heart_eyes_cat'},
+			{id: 2, name: 'em-kissing-cat'},
+			{id: 3, name: 'em-joy-cat'},
+			{id: 4, name: 'em-cat'},
+			{id: 5, name: 'em-crying_cat_face'}];
 		y = emojiFactory.randomize(x);
 		expect(x[0].id).not.toEqual(1);
 	});

@@ -6,8 +6,9 @@
 		'factory.board',
 		'factory.emoji',
 		'components.newgame',
+		'components.game',
 		])
 	.config(function($urlRouterProvider) {
-		$urlRouterProvider.otherwise('/');
+		$urlRouterProvider.otherwise('/new');
 	});
 })();
