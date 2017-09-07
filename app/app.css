@@ -53,7 +53,7 @@ body {
 	border:3px groove #999;
 	border-radius:10px;
 	font-weight:bold;
-	font-size:1.2em;
+	font-size:2em;
 	color:#2d3e83;
 	z-index:2;
 	/*color:#FFDE90;*/
@@ -105,7 +105,7 @@ button.footerButton:hover {
 	width:0%;
 	height:0%;
 	background-color:#397788;
-	transition: height 1.5s linear, width 1.5s linear, top 1.5s linear, left 1.5s linear;
+	transition: height 0.8s linear, width 0.8s linear, top 0.8s linear, left 0.8s linear;
 	/*transition: width 2s linear 0s;*/
 }
 .youwin {
@@ -121,7 +121,7 @@ button.footerButton:hover {
 }
 .winmojistd {
 	width:10%;
-	transition: width 1.5s linear;
+	transition: width 1.0s linear;
 }
 .winmojistd.winmoji {
 	width: 40%;
@@ -140,7 +140,7 @@ button.footerButton:hover {
 	font-size: 100%;
 	z-index:0;
 	text-shadow:2px 2px #C19631;
-	transition: font-size 1.5s linear;
+	transition: font-size 1.0s linear;
 }
 .wintextstd.wintext {
 	font-size: 800%;
